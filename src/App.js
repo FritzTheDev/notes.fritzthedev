@@ -1,7 +1,8 @@
-import "./App.css";
+import { useEffect } from "react";
 import firebase from "firebase/app";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useEffect } from "react";
+
+import { ErrorPage } from "./pages/ErrorPage";
 
 export const App = () => {
   const [user, userLoading, userError] = useAuthState(firebase.auth());
@@ -10,6 +11,8 @@ export const App = () => {
       firebase.auth().signInAnonymously();
     }
   }, [user, userLoading]);
+
+  if (userError) return <ErrorPage errorMessage={userError.message} />
 
   return <div></div>;
 };
