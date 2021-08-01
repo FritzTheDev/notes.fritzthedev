@@ -12,7 +12,7 @@ export const App = () => {
     }
   }, [user, userLoading]);
 
-  if (userError) return <ErrorPage errorMessage={userError.message} />
+  if (userError) return <ErrorPage errorMessage={userError.message} />;
 
-  return <div></div>;
+  return <main className="bg-green-100 w-screen h-screen"></main>;
 };
