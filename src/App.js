@@ -7,7 +7,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 export const App = () => {
   const [user, userLoading, userError] = useAuthState(firebase.auth());
   useEffect(() => {
-    if (!user || userLoading) {
+    if (!user && !userLoading) {
       firebase.auth().signInAnonymously();
     }
   }, [user, userLoading]);
