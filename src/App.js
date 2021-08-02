@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import { Navbar } from "./components/Navbar";
 import { ErrorPage } from "./components/ErrorPage";
+import { NotePanel } from "./components/NotePanel";
 import { CreateNoteDrawer } from "./components/CreateNoteDrawer";
 
 export const App = () => {
@@ -20,6 +21,7 @@ export const App = () => {
   return (
     <main className="bg-green-100 w-screen h-screen">
       <Navbar setDrawerOpen={setCreateDrawerOpen} />
+      <NotePanel />
       <CreateNoteDrawer open={createDrawerOpen} setOpen={setCreateDrawerOpen}  />
     </main>
   );
