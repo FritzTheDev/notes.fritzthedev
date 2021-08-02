@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import { Disclosure } from "@headlessui/react";
-import { DocumentAddIcon, DocumentRemoveIcon } from "@heroicons/react/outline";
+
+import { DocumentAddIcon } from "@heroicons/react/outline";
 
 export const Navbar = ({ setDrawerOpen }) => {
   return (
@@ -9,7 +8,7 @@ export const Navbar = ({ setDrawerOpen }) => {
         <div className="flex w-full justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <h1 className="text-2xl font-bold text-white italic">
-              @FritzTheDev
+              Fritz Notes
             </h1>
           </div>
           <div className="flex">
