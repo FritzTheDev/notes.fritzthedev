@@ -1,4 +1,3 @@
-
 import { DocumentAddIcon } from "@heroicons/react/outline";
 
 export const Navbar = ({ setDrawerOpen }) => {
@@ -24,14 +23,14 @@ export const Navbar = ({ setDrawerOpen }) => {
             </div>
           </div>
           <div className="flex items-center sm:hidden">
-              <button
-                type="button"
-                onClick={() => setDrawerOpen(true)}
-                className="border-transparent text-gray-100 hover:border-green-500 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                <DocumentAddIcon className="h-6 w-6 mr-1" />
-                Create Note
-              </button>
+            <button
+              type="button"
+              onClick={() => setDrawerOpen(true)}
+              className="border-transparent text-gray-100 hover:border-green-500 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+            >
+              <DocumentAddIcon className="h-6 w-6 mr-1" />
+              Create Note
+            </button>
           </div>
         </div>
       </div>
