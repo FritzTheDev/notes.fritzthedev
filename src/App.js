@@ -18,11 +18,18 @@ export const App = () => {
 
   if (userError) return <ErrorPage errorMessage={userError.message} />;
 
-  return (
-    <main className="bg-green-100 w-screen h-screen">
-      <Navbar setDrawerOpen={setCreateDrawerOpen} />
-      <NotePanel />
-      <CreateNoteDrawer open={createDrawerOpen} setOpen={setCreateDrawerOpen}  />
-    </main>
-  );
+  if (user) {
+    return (
+      <main className="bg-green-100 w-screen h-screen">
+        <Navbar setDrawerOpen={setCreateDrawerOpen} />
+        <NotePanel uid={user?.uid} />
+        <CreateNoteDrawer
+          open={createDrawerOpen}
+          setOpen={setCreateDrawerOpen}
+        />
+      </main>
+    );
+  } else {
+    return null;
+  }
 };
